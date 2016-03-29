@@ -13,7 +13,7 @@ before_install:
   - gem --version
 
 script:
-  - bundle install --jobs=3 --retry=3
+  - bundle install --jobs=3 --retry=3 --without changelog
   - bundle exec rake build
   - bundle exec rake spec
 
