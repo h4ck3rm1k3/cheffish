@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 # Specify your gem's dependencies in ruby-project-template.gemspec
 group :development do
-  gem 'chef'
   gem 'rake'
   gem 'rspec', '~> 3.0'
 end
@@ -15,4 +14,8 @@ end
 if ENV['GEMFILE_MOD']
   puts ENV['GEMFILE_MOD']
   instance_eval(ENV['GEMFILE_MOD'])
+else
+  group :development do
+    gem 'chef', '~> 12.2'
+  end
 end
